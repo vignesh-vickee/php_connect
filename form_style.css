@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form {
+    position: relative;
+    z-index: 1;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #8839ff;
+    background-image: linear-gradient(45deg,#6522ea,#aa00ff);
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.success-message {
+    color: green;
+    margin-top: 10px;
+}
+.mestitl{
+    text-align: center;
+}
+.mestitl p{
+    color: #6e6767;
+    font-size: 14px; 
+}
+
+.mesnote {
+    margin: 40px 0 0;
+    color: #6e6767;
+    font-size: 14px;
+    text-align: center;
+  }
+.mesnote a {
+    color: #3a0163;
+    text-decoration: none;
+  }
+/* form styles above */
+
+
+
+
+
