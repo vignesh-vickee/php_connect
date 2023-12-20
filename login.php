@@ -3,6 +3,8 @@ include 'Config.php'; // Include the database connection file
 
 session_start(); // Start the session
 
+$errors = []; // Initialize an array to store error messages
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -23,11 +25,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         } else {
             // Incorrect password
-            echo "Incorrect password.";
+            $errors[] = "Incorrect password.";
         }
     } else {
         // User not found
-        echo "User not found.";
+        $errors[] = "User not found.";
     }
 
     $stmt->close();
@@ -37,4 +39,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $conn->close();
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="form_style.css">
+</head>
+<body>
 
+    <form method="post" action="">
+        <div class="mestitl">
+            <h3>LOGIN</h3>
+            <p>Please enter your credentials to login.</p>
+        </div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <input type="submit" value="Login">
+<p class="mesnote">
+    <?php
+    // Display error messages
+    foreach ($errors as $error) {
+    echo "<p style='color: red;'>$error</p>";
+    }
+    ?>
+</p>
+        <p class="mesnote">Not registered? <a href="register.html">Create an account</a></p>
+
+    </form>
+
+</body>
+</html>

@@ -40,12 +40,16 @@ include 'navbar.php';
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
 </head>
 <body>
+<div class="fmtitle">
         <h1>Express Interest</h1>
 
-
+        <h2>Crucial Information: Payment Handling and Seller Communication :</h2>
+            <h5> Please be aware that our platform does not handle payment transactions, as the pricing of the pet is negotiable.<br>
+                 Instead, we provide you with essential information about the seller to facilitate future communications between you and the seller regarding the purchase.</h5>
+</div>
     <section>
         <h2>Pet Details</h2>
-        <img src="<?php echo $petDetails['image_path']; ?>" alt="<?php echo $petDetails['name']; ?>" class="pet-image">
+        <img src="<?php echo $petDetails['image_path']; ?>" alt="<?php echo $petDetails['breed']; ?>" class="pet-image">
         <!--<p><strong>Name:</strong> ?php echo $petDetails['name']; ?></p> -->
         <p><strong>Pet Type:</strong> <?php echo $petDetails['pet_type']; ?></p>
         <p><strong>Description:</strong> <?php echo $petDetails['description']; ?></p>
@@ -59,7 +63,7 @@ include 'navbar.php';
         <h2>Contact the Seller</h2>
         <form action="contact_seller.php" method="post">
             <input type="hidden" name="seller_email" value="<?php echo $petDetails['seller_email']; ?>">
-            <input type="hidden" name="pet_name" value="<?php echo $petDetails['name']; ?>">
+            <input type="hidden" name="pet_breed" value="<?php echo $petDetails['breed']; ?>">
             <label for="message">Your Message:</label>
             <textarea name="message" id="message" rows="4" required></textarea>
             <br>

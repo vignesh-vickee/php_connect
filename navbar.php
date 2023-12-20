@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Exchange Platform</title>
-    <link rel="stylesheet" href=".css">
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Add your styles for the navigation bar here */
         body {
@@ -24,14 +24,15 @@
             <a href="index.php">Home</a>
             <a href="pet_upload_form.php">Sell your pet</a>
             <a href="browse_pets.php">Pet Listings</a>
-            
+            <a href="user_account.php">User profile</a>
+
             <div class="dropdown">
                 <a href="#">Settings</a>
                 <div class="dropdown-content">
-                    <a href="profile.php">User Profile</a>
-                    <a href="about.html">About us</a>
-                    <a href="logout.php">Logout</a>
+                    <a href="about.php">About us</a>
                     
+                    <a href="register.html">New user registration</a>
+                    <a href="logout.php">Logout</a>
                 </div>
             </div>
             
