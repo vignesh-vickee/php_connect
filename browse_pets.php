@@ -25,17 +25,17 @@ include 'navbar.php';
 
     <section>
         <?php if (empty($availablePets)): ?>
-            <p>No pets are currently available for adoption.</p>
+            <p>No pets are currently available for purchase.</p>
         <?php else: ?>
             <ul class="pet-list">
                 <?php foreach ($availablePets as $pet): ?>
-                    <li>
-                        <img src="<?php echo $pet['image_path']; ?>" alt="<?php echo $pet['name']; ?>" class="pet-image">
-                        <h3><?php echo $pet['name']; ?></h3>
+                    <li class="pet-item">
+                        <img src="<?php echo $pet['image_path']; ?>" alt="<?php echo $pet['breed']; ?>" class="pet-image"><br>
+                        breed :<h3><?php echo $pet['breed']; ?></h3>
                         <p>Description: <?php echo $pet['description']; ?></p>
                         <p>Price: <?php echo $pet['price']; ?></p>
                         <p>Pet Type: <?php echo $pet['pet_type']; ?></p>
-                        <p><a href="express_interest.php?pet_id=<?php echo $pet['id']; ?>">Express Interest</a></p>
+                        <p><a href="express_interest.php?pet_id=<?php echo $pet['id']; ?>">Seller info</a></p>
                     </li>
                 <?php endforeach; ?>
             </ul>
